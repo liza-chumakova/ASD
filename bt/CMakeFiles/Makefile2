@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Projects/course2/git/ASD/bt
 
 # The main recursive "all" target.
 all: lib_easy_example/all
+all: lib_stack/all
 all: lib_queue/all
 all: main/all
 all: tests/all
@@ -71,6 +72,7 @@ all: tests/all
 
 # The main recursive "preinstall" target.
 preinstall: lib_easy_example/preinstall
+preinstall: lib_stack/preinstall
 preinstall: lib_queue/preinstall
 preinstall: main/preinstall
 preinstall: tests/preinstall
@@ -78,6 +80,7 @@ preinstall: tests/preinstall
 
 # The main recursive "clean" target.
 clean: lib_easy_example/clean
+clean: lib_stack/clean
 clean: lib_queue/clean
 clean: main/clean
 clean: third_party/gtest/clean
@@ -113,6 +116,21 @@ lib_queue/preinstall:
 # Recursive "clean" directory target.
 lib_queue/clean: lib_queue/CMakeFiles/Queue.dir/clean
 .PHONY : lib_queue/clean
+
+#=============================================================================
+# Directory level rules for directory lib_stack
+
+# Recursive "all" directory target.
+lib_stack/all: lib_stack/CMakeFiles/Stack.dir/all
+.PHONY : lib_stack/all
+
+# Recursive "preinstall" directory target.
+lib_stack/preinstall:
+.PHONY : lib_stack/preinstall
+
+# Recursive "clean" directory target.
+lib_stack/clean: lib_stack/CMakeFiles/Stack.dir/clean
+.PHONY : lib_stack/clean
 
 #=============================================================================
 # Directory level rules for directory main
@@ -202,7 +220,7 @@ third_party/gtest/googletest/clean: third_party/gtest/googletest/CMakeFiles/gtes
 lib_easy_example/CMakeFiles/EasyExample.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib_easy_example/CMakeFiles/EasyExample.dir/build.make lib_easy_example/CMakeFiles/EasyExample.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib_easy_example/CMakeFiles/EasyExample.dir/build.make lib_easy_example/CMakeFiles/EasyExample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=6,7 "Built target EasyExample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=7,8 "Built target EasyExample"
 .PHONY : lib_easy_example/CMakeFiles/EasyExample.dir/all
 
 # Build rule for subdir invocation for target.
@@ -222,13 +240,39 @@ lib_easy_example/CMakeFiles/EasyExample.dir/clean:
 .PHONY : lib_easy_example/CMakeFiles/EasyExample.dir/clean
 
 #=============================================================================
+# Target rules for target lib_stack/CMakeFiles/Stack.dir
+
+# All Build rule for target.
+lib_stack/CMakeFiles/Stack.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib_stack/CMakeFiles/Stack.dir/build.make lib_stack/CMakeFiles/Stack.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib_stack/CMakeFiles/Stack.dir/build.make lib_stack/CMakeFiles/Stack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=11,12 "Built target Stack"
+.PHONY : lib_stack/CMakeFiles/Stack.dir/all
+
+# Build rule for subdir invocation for target.
+lib_stack/CMakeFiles/Stack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib_stack/CMakeFiles/Stack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 0
+.PHONY : lib_stack/CMakeFiles/Stack.dir/rule
+
+# Convenience name for target.
+Stack: lib_stack/CMakeFiles/Stack.dir/rule
+.PHONY : Stack
+
+# clean rule for target.
+lib_stack/CMakeFiles/Stack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib_stack/CMakeFiles/Stack.dir/build.make lib_stack/CMakeFiles/Stack.dir/clean
+.PHONY : lib_stack/CMakeFiles/Stack.dir/clean
+
+#=============================================================================
 # Target rules for target lib_queue/CMakeFiles/Queue.dir
 
 # All Build rule for target.
 lib_queue/CMakeFiles/Queue.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib_queue/CMakeFiles/Queue.dir/build.make lib_queue/CMakeFiles/Queue.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib_queue/CMakeFiles/Queue.dir/build.make lib_queue/CMakeFiles/Queue.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=8,9 "Built target Queue"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=9,10 "Built target Queue"
 .PHONY : lib_queue/CMakeFiles/Queue.dir/all
 
 # Build rule for subdir invocation for target.
@@ -252,15 +296,16 @@ lib_queue/CMakeFiles/Queue.dir/clean:
 
 # All Build rule for target.
 main/CMakeFiles/Application.dir/all: lib_easy_example/CMakeFiles/EasyExample.dir/all
+main/CMakeFiles/Application.dir/all: lib_stack/CMakeFiles/Stack.dir/all
 main/CMakeFiles/Application.dir/all: lib_queue/CMakeFiles/Queue.dir/all
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Application.dir/build.make main/CMakeFiles/Application.dir/depend
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Application.dir/build.make main/CMakeFiles/Application.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=4,5 "Built target Application"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=5,6 "Built target Application"
 .PHONY : main/CMakeFiles/Application.dir/all
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/Application.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Application.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 0
 .PHONY : main/CMakeFiles/Application.dir/rule
@@ -281,7 +326,7 @@ main/CMakeFiles/Application.dir/clean:
 third_party/gtest/googlemock/CMakeFiles/gmock.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=10,11 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=13,14 "Built target gmock"
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -308,7 +353,7 @@ third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all: third_party/gtest/go
 third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=12,13 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=15,16 "Built target gmock_main"
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -334,7 +379,7 @@ third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 third_party/gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=14,15 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=17,18 "Built target gtest"
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -360,7 +405,7 @@ third_party/gtest/googletest/CMakeFiles/gtest.dir/clean:
 third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=16,17 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=19,20 "Built target gtest_main"
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -384,17 +429,18 @@ third_party/gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 
 # All Build rule for target.
 tests/CMakeFiles/AllTests.dir/all: lib_easy_example/CMakeFiles/EasyExample.dir/all
+tests/CMakeFiles/AllTests.dir/all: lib_stack/CMakeFiles/Stack.dir/all
 tests/CMakeFiles/AllTests.dir/all: lib_queue/CMakeFiles/Queue.dir/all
 tests/CMakeFiles/AllTests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/AllTests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=1,2,3 "Built target AllTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=1,2,3,4 "Built target AllTests"
 .PHONY : tests/CMakeFiles/AllTests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/AllTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/AllTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles 0
 .PHONY : tests/CMakeFiles/AllTests.dir/rule

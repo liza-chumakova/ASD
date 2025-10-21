@@ -13,6 +13,14 @@
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_easy_example/CMakeFiles/install.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_easy_example/CMakeFiles/install/local.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_easy_example/CMakeFiles/install/strip.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/Stack.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/test.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/edit_cache.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/list_install_components.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/install.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/install/local.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_stack/CMakeFiles/install/strip.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/Queue.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/test.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/edit_cache.dir

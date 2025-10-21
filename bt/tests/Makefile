@@ -233,6 +233,30 @@ test_queue.cpp.s:
 	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_queue.cpp.s
 .PHONY : test_queue.cpp.s
 
+test_stack.o: test_stack.cpp.o
+.PHONY : test_stack.o
+
+# target to build an object file
+test_stack.cpp.o:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_stack.cpp.o
+.PHONY : test_stack.cpp.o
+
+test_stack.i: test_stack.cpp.i
+.PHONY : test_stack.i
+
+# target to preprocess a source file
+test_stack.cpp.i:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_stack.cpp.i
+.PHONY : test_stack.cpp.i
+
+test_stack.s: test_stack.cpp.s
+.PHONY : test_stack.s
+
+# target to generate assembly for a file
+test_stack.cpp.s:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_stack.cpp.s
+.PHONY : test_stack.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,6 +277,9 @@ help:
 	@echo "... test_queue.o"
 	@echo "... test_queue.i"
 	@echo "... test_queue.s"
+	@echo "... test_stack.o"
+	@echo "... test_stack.i"
+	@echo "... test_stack.s"
 .PHONY : help
 
 

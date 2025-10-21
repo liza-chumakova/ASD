@@ -93,6 +93,7 @@ Application_EXTERNAL_OBJECTS =
 main/Application.exe: main/CMakeFiles/Application.dir/main.cpp.o
 main/Application.exe: main/CMakeFiles/Application.dir/build.make
 main/Application.exe: lib_easy_example/libEasyExample.a
+main/Application.exe: lib_stack/libStack.a
 main/Application.exe: lib_queue/libQueue.a
 main/Application.exe: main/CMakeFiles/Application.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Application.exe"

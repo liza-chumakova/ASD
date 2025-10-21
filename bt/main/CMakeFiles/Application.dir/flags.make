@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/cygdrive/c/Projects/course2/git/ASD/lib_easy_example -I/cygdrive/c/Projects/course2/git/ASD/lib_queue
+CXX_INCLUDES = -I/cygdrive/c/Projects/course2/git/ASD/lib_easy_example -I/cygdrive/c/Projects/course2/git/ASD/lib_stack -I/cygdrive/c/Projects/course2/git/ASD/lib_queue
 
 CXX_FLAGS = -std=gnu++14
 

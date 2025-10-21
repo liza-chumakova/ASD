@@ -185,6 +185,19 @@ EasyExample/fast:
 .PHONY : EasyExample/fast
 
 #=============================================================================
+# Target rules for targets named Stack
+
+# Build rule for target.
+Stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Stack
+.PHONY : Stack
+
+# fast build rule for target.
+Stack/fast:
+	$(MAKE) $(MAKESILENT) -f lib_stack/CMakeFiles/Stack.dir/build.make lib_stack/CMakeFiles/Stack.dir/build
+.PHONY : Stack/fast
+
+#=============================================================================
 # Target rules for targets named Queue
 
 # Build rule for target.
@@ -292,6 +305,7 @@ help:
 	@echo "... Application"
 	@echo "... EasyExample"
 	@echo "... Queue"
+	@echo "... Stack"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

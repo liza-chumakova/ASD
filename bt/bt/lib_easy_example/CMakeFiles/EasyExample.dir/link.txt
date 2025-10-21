@@ -1,2 +1,0 @@
-/usr/bin/ar.exe qc libEasyExample.a CMakeFiles/EasyExample.dir/easy_example.cpp.o
-/usr/bin/ranlib.exe libEasyExample.a
