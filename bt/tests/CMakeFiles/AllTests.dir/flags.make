@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/cygdrive/c/Projects/course2/git/ASD/lib_easy_example -I/cygdrive/c/Projects/course2/git/ASD/lib_stack -I/cygdrive/c/Projects/course2/git/ASD/lib_queue -isystem /cygdrive/c/Projects/course2/git/ASD/third_party/gtest/googletest/include -isystem /cygdrive/c/Projects/course2/git/ASD/third_party/gtest/googletest
+CXX_INCLUDES = -I/cygdrive/c/Projects/course2/git/ASD/lib_easy_example -I/cygdrive/c/Projects/course2/git/ASD/lib_stack -I/cygdrive/c/Projects/course2/git/ASD/lib_queue -I/cygdrive/c/Projects/course2/git/ASD/lib_algorithms -I/cygdrive/c/Projects/course2/git/ASD/lib_algorithms/../lib_stack -isystem /cygdrive/c/Projects/course2/git/ASD/third_party/gtest/googletest/include -isystem /cygdrive/c/Projects/course2/git/ASD/third_party/gtest/googletest
 
 CXX_FLAGS = -std=gnu++17
 

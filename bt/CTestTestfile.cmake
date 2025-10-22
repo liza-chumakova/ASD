@@ -7,6 +7,7 @@
 subdirs("lib_easy_example")
 subdirs("lib_stack")
 subdirs("lib_queue")
+subdirs("lib_algorithms")
 subdirs("main")
 subdirs("third_party/gtest")
 subdirs("tests")

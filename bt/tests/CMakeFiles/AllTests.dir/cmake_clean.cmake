@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "AllTests.exe"
   "AllTests.pdb"
+  "CMakeFiles/AllTests.dir/test_algorithms.cpp.o"
+  "CMakeFiles/AllTests.dir/test_algorithms.cpp.o.d"
   "CMakeFiles/AllTests.dir/test_easy_example.cpp.o"
   "CMakeFiles/AllTests.dir/test_easy_example.cpp.o.d"
   "CMakeFiles/AllTests.dir/test_queue.cpp.o"

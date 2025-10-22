@@ -69,10 +69,24 @@ include tests/CMakeFiles/AllTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/AllTests.dir/flags.make
 
+tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o: tests/CMakeFiles/AllTests.dir/flags.make
+tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o: /cygdrive/c/Projects/course2/git/ASD/tests/test_algorithms.cpp
+tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o: tests/CMakeFiles/AllTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o"
+	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o -MF CMakeFiles/AllTests.dir/test_algorithms.cpp.o.d -o CMakeFiles/AllTests.dir/test_algorithms.cpp.o -c /cygdrive/c/Projects/course2/git/ASD/tests/test_algorithms.cpp
+
+tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AllTests.dir/test_algorithms.cpp.i"
+	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/course2/git/ASD/tests/test_algorithms.cpp > CMakeFiles/AllTests.dir/test_algorithms.cpp.i
+
+tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AllTests.dir/test_algorithms.cpp.s"
+	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/course2/git/ASD/tests/test_algorithms.cpp -o CMakeFiles/AllTests.dir/test_algorithms.cpp.s
+
 tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o: tests/CMakeFiles/AllTests.dir/flags.make
 tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o: /cygdrive/c/Projects/course2/git/ASD/tests/test_easy_example.cpp
 tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o: tests/CMakeFiles/AllTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o"
 	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o -MF CMakeFiles/AllTests.dir/test_easy_example.cpp.o.d -o CMakeFiles/AllTests.dir/test_easy_example.cpp.o -c /cygdrive/c/Projects/course2/git/ASD/tests/test_easy_example.cpp
 
 tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.i: cmake_force
@@ -86,7 +100,7 @@ tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.s: cmake_force
 tests/CMakeFiles/AllTests.dir/test_queue.cpp.o: tests/CMakeFiles/AllTests.dir/flags.make
 tests/CMakeFiles/AllTests.dir/test_queue.cpp.o: /cygdrive/c/Projects/course2/git/ASD/tests/test_queue.cpp
 tests/CMakeFiles/AllTests.dir/test_queue.cpp.o: tests/CMakeFiles/AllTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/AllTests.dir/test_queue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/AllTests.dir/test_queue.cpp.o"
 	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/AllTests.dir/test_queue.cpp.o -MF CMakeFiles/AllTests.dir/test_queue.cpp.o.d -o CMakeFiles/AllTests.dir/test_queue.cpp.o -c /cygdrive/c/Projects/course2/git/ASD/tests/test_queue.cpp
 
 tests/CMakeFiles/AllTests.dir/test_queue.cpp.i: cmake_force
@@ -100,7 +114,7 @@ tests/CMakeFiles/AllTests.dir/test_queue.cpp.s: cmake_force
 tests/CMakeFiles/AllTests.dir/test_stack.cpp.o: tests/CMakeFiles/AllTests.dir/flags.make
 tests/CMakeFiles/AllTests.dir/test_stack.cpp.o: /cygdrive/c/Projects/course2/git/ASD/tests/test_stack.cpp
 tests/CMakeFiles/AllTests.dir/test_stack.cpp.o: tests/CMakeFiles/AllTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/AllTests.dir/test_stack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/AllTests.dir/test_stack.cpp.o"
 	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/AllTests.dir/test_stack.cpp.o -MF CMakeFiles/AllTests.dir/test_stack.cpp.o.d -o CMakeFiles/AllTests.dir/test_stack.cpp.o -c /cygdrive/c/Projects/course2/git/ASD/tests/test_stack.cpp
 
 tests/CMakeFiles/AllTests.dir/test_stack.cpp.i: cmake_force
@@ -113,6 +127,7 @@ tests/CMakeFiles/AllTests.dir/test_stack.cpp.s: cmake_force
 
 # Object files for target AllTests
 AllTests_OBJECTS = \
+"CMakeFiles/AllTests.dir/test_algorithms.cpp.o" \
 "CMakeFiles/AllTests.dir/test_easy_example.cpp.o" \
 "CMakeFiles/AllTests.dir/test_queue.cpp.o" \
 "CMakeFiles/AllTests.dir/test_stack.cpp.o"
@@ -120,6 +135,7 @@ AllTests_OBJECTS = \
 # External object files for target AllTests
 AllTests_EXTERNAL_OBJECTS =
 
+tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o
 tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o
 tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/test_queue.cpp.o
 tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/test_stack.cpp.o
@@ -127,11 +143,13 @@ tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/build.make
 tests/AllTests.exe: lib_easy_example/libEasyExample.a
 tests/AllTests.exe: lib_stack/libStack.a
 tests/AllTests.exe: lib_queue/libQueue.a
+tests/AllTests.exe: lib_algorithms/libAlgorithms.a
 tests/AllTests.exe: lib/libgtest.a
 tests/AllTests.exe: lib/libgtest_main.a
+tests/AllTests.exe: lib_stack/libStack.a
 tests/AllTests.exe: lib/libgtest.a
 tests/AllTests.exe: tests/CMakeFiles/AllTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable AllTests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/cygdrive/c/Projects/course2/git/ASD/bt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable AllTests.exe"
 	cd /cygdrive/c/Projects/course2/git/ASD/bt/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AllTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

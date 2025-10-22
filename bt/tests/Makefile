@@ -185,6 +185,30 @@ AllTests/fast:
 	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/build
 .PHONY : AllTests/fast
 
+test_algorithms.o: test_algorithms.cpp.o
+.PHONY : test_algorithms.o
+
+# target to build an object file
+test_algorithms.cpp.o:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o
+.PHONY : test_algorithms.cpp.o
+
+test_algorithms.i: test_algorithms.cpp.i
+.PHONY : test_algorithms.i
+
+# target to preprocess a source file
+test_algorithms.cpp.i:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.i
+.PHONY : test_algorithms.cpp.i
+
+test_algorithms.s: test_algorithms.cpp.s
+.PHONY : test_algorithms.s
+
+# target to generate assembly for a file
+test_algorithms.cpp.s:
+	cd /cygdrive/c/Projects/course2/git/ASD/bt && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AllTests.dir/build.make tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.s
+.PHONY : test_algorithms.cpp.s
+
 test_easy_example.o: test_easy_example.cpp.o
 .PHONY : test_easy_example.o
 
@@ -271,6 +295,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... AllTests"
+	@echo "... test_algorithms.o"
+	@echo "... test_algorithms.i"
+	@echo "... test_algorithms.s"
 	@echo "... test_easy_example.o"
 	@echo "... test_easy_example.i"
 	@echo "... test_easy_example.s"

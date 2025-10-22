@@ -54,6 +54,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/cygdrive/c/Projects/course2/git/ASD/bt/main/cmake_install.cmake")
 endif()
 

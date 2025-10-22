@@ -29,6 +29,14 @@
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/install.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/install/local.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/lib_queue/CMakeFiles/install/strip.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/Algorithms.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/test.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/edit_cache.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/list_install_components.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/install.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/install/local.dir
+/cygdrive/c/Projects/course2/git/ASD/bt/lib_algorithms/CMakeFiles/install/strip.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/main/CMakeFiles/Application.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/main/CMakeFiles/test.dir
 /cygdrive/c/Projects/course2/git/ASD/bt/main/CMakeFiles/edit_cache.dir

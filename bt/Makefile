@@ -211,6 +211,19 @@ Queue/fast:
 .PHONY : Queue/fast
 
 #=============================================================================
+# Target rules for targets named Algorithms
+
+# Build rule for target.
+Algorithms: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algorithms
+.PHONY : Algorithms
+
+# fast build rule for target.
+Algorithms/fast:
+	$(MAKE) $(MAKESILENT) -f lib_algorithms/CMakeFiles/Algorithms.dir/build.make lib_algorithms/CMakeFiles/Algorithms.dir/build
+.PHONY : Algorithms/fast
+
+#=============================================================================
 # Target rules for targets named Application
 
 # Build rule for target.
@@ -301,6 +314,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... Algorithms"
 	@echo "... AllTests"
 	@echo "... Application"
 	@echo "... EasyExample"

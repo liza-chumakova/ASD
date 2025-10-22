@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/cygdrive/c/Projects/course2/git/ASD/tests/test_algorithms.cpp" "tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o" "gcc" "tests/CMakeFiles/AllTests.dir/test_algorithms.cpp.o.d"
   "/cygdrive/c/Projects/course2/git/ASD/tests/test_easy_example.cpp" "tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o" "gcc" "tests/CMakeFiles/AllTests.dir/test_easy_example.cpp.o.d"
   "/cygdrive/c/Projects/course2/git/ASD/tests/test_queue.cpp" "tests/CMakeFiles/AllTests.dir/test_queue.cpp.o" "gcc" "tests/CMakeFiles/AllTests.dir/test_queue.cpp.o.d"
   "/cygdrive/c/Projects/course2/git/ASD/tests/test_stack.cpp" "tests/CMakeFiles/AllTests.dir/test_stack.cpp.o" "gcc" "tests/CMakeFiles/AllTests.dir/test_stack.cpp.o.d"
