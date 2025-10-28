@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -Wl,--enable-auto-import CMakeFiles/Application.dir/main.cpp.o -o Application.exe -Wl,--out-implib,libApplication.dll.a -Wl,--major-image-version,0,--minor-image-version,0  ../lib_easy_example/libEasyExample.a 

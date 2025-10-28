@@ -1,2 +1,0 @@
-/usr/bin/ar.exe qc libQueue.a CMakeFiles/Queue.dir/queue.cpp.o
-/usr/bin/ranlib.exe libQueue.a
