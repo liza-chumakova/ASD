@@ -3,11 +3,6 @@
 
 #include <string>
 
-int main()
-{
-    return 0;
-}
-
 bool check_same(char left, char right) {
     if (((left == '(') && (right == ')')) || ((left == '{') && (right == '}')) || ((left == '[') && (right == ']'))) {
         return true;
@@ -17,26 +12,34 @@ bool check_same(char left, char right) {
 
 bool check_brackets(const std::string& toCheck) {
     Stack<char> stack(toCheck.length());
-
-    for (int i = 0; i < toCheck.length(); ++i) {
-        char c = toCheck[i];
-        
-        if (c == '(' || c == '{' || c == '[') {
-            stack.push(c);
-        }
-        else if (c == ')' || c == '}' || c == ']') {
-            if (stack.is_empty()) {
-                return false;
-            }
-            
-            char top = stack.top();
-            stack.pop();
-            
-            if (!check_same(top, c)) {
-                return false;
-            }
-        }
+    if (toCheck[0] == ')' || toCheck[0] == ']' || toCheck[0] == '}') {
+        return false;
+    }
+    if (toCheck[toCheck.length() - 1] == '(' || toCheck[toCheck.length() - 1] == '[' || toCheck[toCheck.length() - 1] == '{') {
+        return false;
     }
 
-    return stack.is_empty();
+    else {
+        for (int i = 0; i < toCheck.length(); ++i) {
+            char c = toCheck[i];
+            
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            }
+            else if (c == ')' || c == '}' || c == ']') {
+                if (stack.is_empty()) {
+                    return false;
+                }
+                
+                char top = stack.top();
+                stack.pop();
+                
+                if (!check_same(top, c)) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.is_empty();
+    }
 }

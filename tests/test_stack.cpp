@@ -33,7 +33,7 @@ TEST(TestStack, can_create_with_copying_constructor) {
 
     //Assert
     EXPECT_EQ(stack1.size(), 5);
-    for (int i = 0; i < stack1.size(); ++i)
+    for (int i = 4; i >= 0; --i)
     {
         EXPECT_EQ(stack1.top(), i + 1);
         stack1.pop();
@@ -65,4 +65,33 @@ TEST(TestStack, is_push_correct_exception)
     stack.push(1);
 
     EXPECT_THROW(stack.push(2), std::logic_error);
+}
+
+TEST(TestStack, push_and_pop) {
+    Stack<int> stack(5);
+
+    stack.push(10);
+    EXPECT_EQ(stack.top(), 10);
+    EXPECT_FALSE(stack.is_empty());
+    EXPECT_FALSE(stack.is_full());
+    
+    stack.push(20);
+    EXPECT_EQ(stack.top(), 20);
+    EXPECT_EQ(stack.get_top(), 1);
+    
+    stack.pop();
+    EXPECT_EQ(stack.top(), 10);
+    EXPECT_EQ(stack.get_top(), 0);
+    
+    stack.push(30);
+    EXPECT_EQ(stack.top(), 30);
+    EXPECT_EQ(stack.get_top(), 1);
+    
+    stack.pop();
+    EXPECT_EQ(stack.top(), 10);
+    EXPECT_EQ(stack.get_top(), 0);
+    
+    stack.push(40);
+    EXPECT_EQ(stack.top(), 40);
+    EXPECT_EQ(stack.get_top(), 1);
 }

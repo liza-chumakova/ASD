@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../lib_list_queue/Lqueue.h"
 
-TEST(QueueTestL, can_push) {
+TEST(TestQueueL, can_push) {
     QueueList<int> queue({});
     
     queue.push(10);
@@ -14,7 +14,7 @@ TEST(QueueTestL, can_push) {
     EXPECT_EQ(queue.front(), 10);
 }
 
-TEST(QueueTestL, hard_push) {
+TEST(TestQueueL, hard_push) {
     QueueList<int> queue({1, 2, 3});
     EXPECT_EQ(queue.count(), 3);
     EXPECT_EQ(queue.front(), 1);
@@ -27,7 +27,7 @@ TEST(QueueTestL, hard_push) {
     EXPECT_EQ(queue.back(), 4);
 }
 
-TEST(QueueTestL, is_pop_correct) {
+TEST(TestQueueL, is_pop_correct) {
     QueueList<int> queue({});
     
     queue.push(10);
@@ -52,21 +52,21 @@ TEST(QueueTestL, is_pop_correct) {
     EXPECT_TRUE(queue.is_empty());
 }
 
-TEST(QueuePopTestL, is_pop_exception) {
+TEST(TestQueueL, is_pop_exception) {
     QueueList<int> queue({});
     
     EXPECT_TRUE(queue.is_empty());
     EXPECT_THROW(queue.pop(), std::logic_error);
 }
 
-TEST(QueueIntegrationTestL, push_and_pop) {
+TEST(TestQueueL, push_and_pop) {
     QueueList<int> queue({});
     EXPECT_EQ(queue.count(), 0);
 
     queue.push(1);
     EXPECT_EQ(queue.front(), 1);
     queue.push(2);
-    EXPECT_EQ(queue.front(), 2);
+    EXPECT_EQ(queue.front(), 1);
     queue.pop();
     queue.push(3);
     queue.push(4);

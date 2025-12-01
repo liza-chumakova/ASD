@@ -103,10 +103,8 @@ DLinkedList<T>& DLinkedList<T>::operator=(const DLinkedList<T>& other) {
     }
 
     Node<T>* cur = other.head();
-    int cur_pos = 0;
     while (cur != nullptr) {
         push_back(cur->value);
-        ++cur_pos;
         cur = cur->next;
     }
 
@@ -119,11 +117,9 @@ bool DLinkedList<T>::operator==(const DLinkedList& other) const {
 
     Node<T>* cur = _head;
     Node<T>* cur_other = other._head;
-    int cur_pos = 0;
     while (cur != nullptr) {
         if (cur->value != cur_other->value) { return false; }
         //допроверка
-        ++cur_pos;
         cur = cur->next;
         cur_other = cur_other->next;
     }
@@ -157,7 +153,6 @@ void DLinkedList<T>::push_back(const T& val) noexcept {
         return;
     }
 
-    //assert(_tail->_next == nullptr);
     _tail->_next = node;
     _tail = node;
     ++_count;
@@ -231,7 +226,6 @@ void DLinkedList<T>::pop_back() {
     }
     if(_count == 1) {
         pop_front();
-        return;
     }
     // Node<T>* cur = _head;
     // int cur_pos = 0;
@@ -247,11 +241,13 @@ void DLinkedList<T>::pop_back() {
     // _tail = cur;
     // delete pr_node;
     // --_count;
-    Node<T>* temp = _tail;
-    _tail = _tail->_prev;
-    _tail->_next = nullptr;
-    delete temp;
-    --_count;
+    else {
+        Node<T>* temp = _tail;
+        _tail = _tail->_prev;
+        _tail->_next = nullptr;
+        delete temp;
+        --_count;
+    }
 }
 
 template <typename T>
@@ -262,22 +258,11 @@ void DLinkedList<T>::pop(int pos) {
     if(pos == 0) {
         pop_front();
     }
-    else if(pos == _count) {
+    else if(pos == _count - 1) {
         pop_back();
     }
     else {
         Node<T>* cur = _head;
-        // int cur_pos = 0;
-        // while (cur != nullptr) {
-        //     if (cur_pos == pos - 1) {
-        //         break;
-        //     }
-        //     ++cur_pos;
-        //     cur = cur->next;
-        // }
-        // Node<T>* pr_node = cur->_next;
-        // cur->_next = (cur->_next)->_next;
-        // delete pr_node;
         for (int i = 0; i < pos; ++i) {
             cur = cur->_next;
         }
@@ -291,31 +276,21 @@ void DLinkedList<T>::pop(Node<T>* node) {
     if (node == nullptr) {
         throw std::logic_error("Node error");
     }
-    // Node<T>* cur = _head;
-    // int cur_pos = 0;
-    // while (cur != nullptr) {
-    //     if (cur_pos == _count - 1) {
-    //         break;
-    //     }
-    //     ++cur_pos;
 
-    //     cur->_next = node->_next;
-    // }
-    // delete node;
     if (node == _head) {
         pop_front();
-        return;
     }
     
-    if (node == _tail) {
+    else if (node == _tail) {
         pop_back();
-        return;
     }
 
-    node->_prev->_next = node->_next;
-    node->_next->_prev = node->_prev;
-    delete node;
-    --_count;
+    else {
+        node->_prev->_next = node->_next;
+        node->_next->_prev = node->_prev;
+        delete node;
+        --_count;
+    }
 }
 
 template <typename T>
@@ -327,7 +302,7 @@ template <typename T>
 Node<T>* DLinkedList<T>::find(const T& val) {
     Node<T>* cur = _head;
     while (cur != nullptr) {
-        if (cur->value == val) {
+        if (cur->_value == val) {
             return cur;
         }
         cur = cur->_next;
@@ -339,11 +314,11 @@ Node<T>* DLinkedList<T>::find(const T& val) {
 template <typename T>
 typename DLinkedList<T>::Iterator& DLinkedList<T>::Iterator::operator=(const Iterator& other) {
     this->_current = other._current;
-    return *this; // Добавлен возврат значения
+    return *this;
 }
 
 template <typename T>
-T& DLinkedList<T>::Iterator::operator*() { // Убрали <T> после Iterator
+T& DLinkedList<T>::Iterator::operator*() {
     return _current->_value;
 }
 
@@ -368,6 +343,21 @@ template <typename T>
 typename DLinkedList<T>::Iterator& DLinkedList<T>::Iterator::operator++() {
     if(_current != nullptr) {
         _current = _current->_next;
+    }
+    return *this;
+}
+
+template <typename T>
+typename DLinkedList<T>::Iterator DLinkedList<T>::Iterator::operator--(int) {
+    Iterator temp = *this;
+    --(*this);
+    return temp;
+}
+
+template <typename T>
+typename DLinkedList<T>::Iterator& DLinkedList<T>::Iterator::operator--() {
+    if (_current != nullptr) {
+        _current = _current->_prev;
     }
     return *this;
 }

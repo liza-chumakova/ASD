@@ -14,17 +14,6 @@ TEST(QueueTest, can_push) {
     EXPECT_EQ(queue.front(), 10);
 }
 
-TEST(QueueTest, is_push_exception) {
-    Queue<int> queue(3);
-    
-    queue.push(1);
-    queue.push(2);
-    queue.push(3);
-    
-    EXPECT_TRUE(queue.is_full());
-    EXPECT_THROW(queue.push(4), std::runtime_error);
-}
-
 TEST(QueueTest, hard_push) {
     Queue<int> queue({1, 2, 3});
     EXPECT_EQ(queue.count(), 3);
@@ -35,6 +24,17 @@ TEST(QueueTest, hard_push) {
     
     EXPECT_EQ(queue.count(), 3);
     EXPECT_EQ(queue.front(), 2);
+}
+
+TEST(QueueTest, is_push_exception) {
+    Queue<int> queue(3);
+    
+    queue.push(1);
+    queue.push(2);
+    queue.push(3);
+    
+    EXPECT_TRUE(queue.is_full());
+    EXPECT_THROW(queue.push(4), std::runtime_error);
 }
 
 TEST(QueueTest, is_pop_correct) {
@@ -61,14 +61,14 @@ TEST(QueueTest, is_pop_correct) {
     EXPECT_TRUE(queue.is_empty());
 }
 
-TEST(QueuePopTest, is_pop_exception) {
+TEST(QueueTest, is_pop_exception) {
     Queue<int> queue(3);
     
     EXPECT_TRUE(queue.is_empty());
     EXPECT_THROW(queue.pop(), std::runtime_error);
 }
 
-TEST(QueueIntegrationTest, push_and_pop) {
+TEST(QueueTest, push_and_pop) {
     Queue<int> queue(4);
     EXPECT_EQ(queue.count(), 0);
     

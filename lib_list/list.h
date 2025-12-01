@@ -67,14 +67,10 @@ public:
 template <class T>
 List<T>::List() : _head(nullptr), _tail(nullptr), _count(0) {}
 
-// template <typename T>
-// List<T>::List(const List<T>& other) {
-
-// }
-
 template <typename T>
-List<T>::List(std::initializer_list<T> data) {
-    // std::initializer_list<T>::const_iterator it;
+List<T>::List(std::initializer_list<T> data) 
+    : _head(nullptr), _tail(nullptr), _count(0)
+{
     for (auto it = data.begin(); it != data.end(); ++it) {
         this->push_back(*it);
     }
@@ -147,7 +143,6 @@ void List<T>::push_back(const T& val) noexcept {
         return;
     }
 
-    //assert(_tail->_next == nullptr);
     _tail->_next = node;
     _tail = node;
     ++_count;
@@ -173,7 +168,7 @@ void List<T>::insert(int pos, const T& val) {
             }
             ++cur_pos;
 
-            cur = cur->next;
+            cur = cur->_next;
         }
         insert(cur, val);
     }
@@ -187,6 +182,7 @@ void List<T>::insert(Node<T>* node, const T& val) {
     }
     Node<T>* new_node = new Node<T>(val, node->_next);
     //if(_tail == node) {
+        new_node->_next = node->_next;
         node->_next = new_node;
     //}
 
@@ -219,6 +215,7 @@ void List<T>::pop_back() {
         _tail = nullptr;
         delete pr_node;
         --_count;
+        return;
     }
     Node<T>* cur = _head;
     int cur_pos = 0;
@@ -244,7 +241,7 @@ void List<T>::pop(int pos) {
     if(pos == 0) {
         pop_front();
     }
-    else if(pos == _count) {
+    else if(pos == _count - 1) {
         pop_back();
     }
     else {
@@ -255,11 +252,17 @@ void List<T>::pop(int pos) {
                 break;
             }
             ++cur_pos;
-            cur = cur->next;
+            cur = cur->_next;
         }
+
+        if (cur == nullptr) {
+            throw std::logic_error("Internal error");
+        }
+
         Node<T>* pr_node = cur->_next;
         cur->_next = (cur->_next)->_next;
         delete pr_node;
+        --_count;
     }
 }
 
@@ -300,11 +303,11 @@ Node<T>* List<T>::find(const T& val) {
 template <typename T>
 typename List<T>::Iterator& List<T>::Iterator::operator=(const Iterator& other) {
     this->_current = other._current;
-    return *this; // Добавлен возврат значения
+    return *this;
 }
 
 template <typename T>
-T& List<T>::Iterator::operator*() { // Убрали <T> после Iterator
+T& List<T>::Iterator::operator*() {
     return _current->_value;
 }
 
