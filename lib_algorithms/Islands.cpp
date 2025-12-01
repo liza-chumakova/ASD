@@ -27,7 +27,7 @@ int IslandCounter::countIslands() {
     for (int i = 0; i < _rows; ++i) {
         for (int j = 0; j < _cols; ++j) {
             if (_grid[i][j] == 1) {
-                int currentIndex = flattenIndex(i, j);
+                int currentIndex = flattenIndex(i, j);//получаем текущий индекс
                 
                 // Проверяем всех соседей
                 for (int k = 0; k < 4; ++k) {
@@ -36,14 +36,14 @@ int IslandCounter::countIslands() {
                     
                     if (isValid(ni, nj) && _grid[ni][nj] == 1) {
                         int neighborIndex = flattenIndex(ni, nj);
-                        dsu.unite(currentIndex, neighborIndex);
+                        dsu.unite(currentIndex, neighborIndex);//объединяем если с боков тоже суша
                     }
                 }
             }
         }
     }
     
-    // Второй проход: подсчет уникальных корней для ячеек суши
+    // Второй проход: подсчет островов
     TVector<bool> isRoot(_rows * _cols);
     for (int i = 0; i < isRoot.size(); ++i) {
         isRoot[i] = false;

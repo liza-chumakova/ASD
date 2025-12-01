@@ -101,7 +101,7 @@ TEST(IslandCounterTest, SingleComplexIsland) {
     TVector<TVector<int>> grid(4);
     grid[0] = TVector<int>({1, 0, 1, 0});
     grid[1] = TVector<int>({1, 1, 1, 0});
-    grid[2] = TVector<int>({0, 1, 0, 1});
+    grid[2] = TVector<int>({0, 1, 1, 1});
     grid[3] = TVector<int>({0, 0, 1, 1});
     
     IslandCounter counter(grid);
